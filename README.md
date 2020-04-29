@@ -2,6 +2,8 @@
 
 A simple exporter that can requests waqi.info and exposes the data as prometheus metrics.
 
+See [ACICN](https://aqicn.org/data-platform/token/#/) for your AQICN_TOKEN
+
 
 ## Usage
 
