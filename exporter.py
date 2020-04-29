@@ -20,11 +20,12 @@ if __name__ == '__main__':
 
 
 def metrics_by_city(city, token):
+    print("Scraping %s" % city)
     response = requests.get('https://api.waqi.info/feed/%s/?token=%s' % (city, token))
 
     js_data = response.json()["data"]
     if isinstance(js_data, str):
-        print("Error with %s: %s" % (city, js_data["data"]))
+        print("Error with %s: %s" % (city, js_data))
         return
     aqi.labels(city).set(js_data["aqi"])
     pm25.labels(city).set(js_data["iaqi"]["pm25"]["v"])

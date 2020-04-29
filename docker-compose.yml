@@ -20,7 +20,7 @@ services:
 
   exporter_waqi:
       restart: always
-      image: exporter_external
+      image: exporter_waqi
       environment:
         - AQICN_TOKEN=<TOKEN>
         - CITIES=<cities>
